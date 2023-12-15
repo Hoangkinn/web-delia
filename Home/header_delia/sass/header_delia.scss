@@ -1,0 +1,423 @@
+.header_delia {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+    &__box {
+        background: #025955;
+        border-radius: 0 0 40px 40px;
+        padding-top: 3px;
+    }
+    &__top {
+         background: #fff;
+         padding: 7px 0;        
+    }
+    &__text {
+        color: #025955;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -47px;
+    }
+    &__logo {
+        display: flex;
+        border-radius: 0 70px 0 0;
+        width: 30%;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        background: #025955;
+        height: 53px;
+        margin: 0;
+        img {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        a {
+          width: 100%;
+        }
+    }
+    &__icon {
+        display: flex;
+        border-radius: 70px 0 0 0;
+        width: 30%;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        background: #025955;
+        height: 53px;
+        
+    }
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        img {
+            width: 23px;
+            height: auto;
+            display: block;
+        }
+        p {
+            margin: 0;
+            color: #E6C639;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.2s linear;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    &__button {
+        text-align: center;
+        color: #025955;
+        background: #E6C639;
+        border-radius: 5px;
+        font-weight: 500;
+        padding: 5px 15px ;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+            background: #fff;
+        }
+    }
+    &__listMenu {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background: #025955;
+        border-radius: 0 0 40px 40px;
+        padding: 5px 0 7px;
+    }
+    &__item {
+        list-style: none;
+        width: 13%;
+        text-align: center;
+        position: relative;
+        &:hover {
+          .header_delia__dropdown {
+            display: flex;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(1%);
+          }
+        }
+      }
+    &__link {
+        a {
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.2s linear;
+            &:hover {
+                color: #E6C639;
+            }
+        }
+    }
+    &__dropdown {
+        transition: all 0.2s linear;
+        position: absolute;
+        top: 47px;
+        left: 0;
+        background: #fff;
+        border-radius: 7px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+        transform: translateY(10%);
+        transition: transform 0.2s linear;
+        display: flex;
+        opacity: 0;  
+        visibility: hidden;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 200px;
+            li {
+                border-bottom: 1px solid #f1f1f1;
+                padding: 8px 20px;
+                text-align: left;
+            }
+        }
+    }
+    &__dropItemTitle {
+        font-size: 16px;
+        font-weight: 500;
+        color: #025955;
+        position: relative;
+        padding: 8px 0;
+        transition: all 0.2s linear;
+        a {
+            font-weight: 500;
+            color: #025955;
+        }
+        &:hover {
+          .header_delia__dropItemSmall {
+            height: auto;
+            display: block;
+          }
+        }
+    }
+    .header_delia__dropItemTitle:hover {
+        background-color: #025955;
+        color: #fff;
+        a {
+            color: #fff;
+        }
+        .header_delia__dropItemSmall{
+            a {
+                color: #025955;
+             }
+        }
+    }
+    &__dropItemSmall {
+        height: 0;
+        transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
+        display: none;
+        position: absolute;
+        left: 198px;
+        top: -1px;
+        width: 100%;
+        background: #fff;
+        border-radius: 0 7px 7px 0px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s linear;
+        ul li {
+          padding: 8px 10px;
+          transition: all 0.2s linear;
+          &:hover {
+            background: #d9ba30;
+          }
+        }
+    }
+    &__nav {
+      display: none;
+    }
+    &__logoMb,
+    &__logoSmail {
+      display: none;
+    }
+    &__bg {
+      display: none;
+    }
+    @media (max-width: 1200px) { 
+        .container {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        &__content {
+            display: none;
+        }
+        &__top {
+            display: none;
+        }
+        &__logoSmail {
+          display: block;
+          margin: 0;
+          img {
+            max-width: 160px;
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        }
+        &__box {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 0;
+            align-items: center;
+            padding: 8px 15px;
+        }
+        &__bg {
+            background: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        &__nav {
+            display: block;
+            img {
+              display: block;
+              width: 25px ;
+              height: auto;
+            }
+          }
+          &__link {
+            padding: 2px 0 8px 15px;
+            border-bottom: 1px dotted #18817c;
+            text-align: left;
+            a {
+                font-size: 15px;
+            }
+            br {
+                display: none;
+            }
+          }
+          &__logo {
+            max-width: 60px;
+          }
+          &__logoMb {
+            display: block;
+            margin: 10px auto;
+            max-width: 160px ;
+            img {
+              width: 100%;
+              display: block;
+              height: auto;
+            }
+          }
+          &__bottom {
+            flex-direction: column;
+            overflow-y: auto;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            width: 250px;
+            z-index: 20;
+            transform: translateX(100%);
+            transition: all 0.3s linear;
+            background: #025955;
+          }
+          .show {
+            transform: translateX(0);
+          }
+          &__list {
+            gap: 0;
+            border-top: 1px dotted #18817c;
+          }
+          &__listMenu {
+            flex-direction: column;
+            width: 100%;
+            gap: 0px;
+          }
+          &__item {
+            width: 100%;
+            padding: 3px 0;
+          }
+          &__btn {
+            display: none;
+            margin: 0;
+          }
+          &__link::after {
+            content: "ˇ";
+            position: absolute;
+            right: 10px;
+            font-size: 25px;
+            color: #fff;
+          }
+      
+          &__link:last-child::after {
+            content: none;
+          }
+      
+          .header_delia__dropItemTitle:has(
+              > .header_delia__dropItemSmall
+            )::after {
+            content: "ˇ";
+            position: absolute;
+            right: 0;
+            font-size: 25px;
+            top: 8px;
+            color: #bda227;
+          }
+      
+          &__item:hover {
+            .header_delia__dropdown {
+              display: block;
+              flex-direction: column;
+            }
+            .header_delia__link {
+              background-color: unset;
+            }
+          }
+          &__item.open .header_delia__dropdown {
+            display: block;
+            background-color: #eee;
+            width: 100%;
+          }
+          .header_delia__dropItemTitle:hover {
+            background-color: #eee;
+            font-weight: bold;
+            color: #bda227;
+          }
+          .header_delia__dropItemTitle:hover .header_delia__dropItemSmall {
+            font-weight: 400;
+          }
+          &__dropdown {
+            width: 100%;
+            display: none;
+            position: unset;
+            padding: 0;
+            box-shadow: unset;
+            border: none;
+            margin: 0;
+            border-radius: 0;
+            padding: 2px 15px;
+            ul {
+                width: 226px;
+              li {
+                border-bottom: 1px dotted #ccc;
+                padding: 6px 20px 6px 0px;
+              }
+            }
+          }
+          &__dropTitle {
+            font-size: 14px;
+          }
+          &__dropItemSmall {
+            position: unset;
+            left: 0;
+            top: 0;
+            background: none;
+            border-radius: none;
+            border: none;
+            box-shadow: none;
+          }
+          &__dropItemTitle {
+            position: relative;
+            &:hover {
+              .header_delia__dropItemSmall {
+                padding: 0 15px;
+                margin-top: 5px;
+                border-bottom: 1px dotted #eaeaea;
+                border-radius: 0;
+                ul li {
+                    &:hover {
+                        background-color: #eee;
+                    }
+                }
+              }
+            }
+            &.drop {
+              border-bottom: none;
+            }
+          }
+          .header_delia__dropItemTitle:hover {
+              a {
+                  color: #025955;
+              }
+          }
+    }
+    @media (max-width: 767px) {
+        &__logoSmail img {
+            max-width: 135px;
+        }
+        &__logoMb {
+            max-width: 130px;
+        }
+    }
+}

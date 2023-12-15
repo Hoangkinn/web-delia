@@ -1,0 +1,70 @@
+.service_delia {
+    padding: 30px 0;
+    background: url('../images/bg.jpg') center 0 no-repeat;
+    background-size: cover;
+    &__title {
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+        text-align: center;
+        color: #025955;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+    &__box {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 32%;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: rgba(2, 89, 85, 0.2117647059) 1.95px 2.95px 3px;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px 12px 0 0;
+        }
+    }
+    &__text {
+        padding: 7px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+        color: #025955;
+        text-align: center;
+    }
+    @media (max-width: 1180px) {
+        &__item {
+            width: 31%;
+        }
+    }
+    @media (max-width: 767px) {
+        &__title {
+            font-size: 22px;
+            padding-bottom: 15px;
+        }
+        &__box {
+            gap: 10px;
+        }
+        &__item {
+            width: 48%;
+        }
+        &__text {
+            font-size: 14px;
+            padding: 5px 0;
+        }
+    }
+    @media (max-width: 320px) {
+        &__title {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 12px;
+        }
+    }
+}

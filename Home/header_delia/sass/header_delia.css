@@ -1,0 +1,401 @@
+@charset "UTF-8";
+.header_delia {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+.header_delia__box {
+  background: #025955;
+  border-radius: 0 0 40px 40px;
+  padding-top: 3px;
+}
+.header_delia__top {
+  background: #fff;
+  padding: 7px 0;
+}
+.header_delia__text {
+  color: #025955;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header_delia__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -47px;
+}
+.header_delia__logo {
+  display: flex;
+  border-radius: 0 70px 0 0;
+  width: 30%;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background: #025955;
+  height: 53px;
+  margin: 0;
+}
+.header_delia__logo img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.header_delia__logo a {
+  width: 100%;
+}
+.header_delia__icon {
+  display: flex;
+  border-radius: 70px 0 0 0;
+  width: 30%;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background: #025955;
+  height: 53px;
+}
+.header_delia__phone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header_delia__phone img {
+  width: 23px;
+  height: auto;
+  display: block;
+}
+.header_delia__phone p {
+  margin: 0;
+  color: #E6C639;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.2s linear;
+}
+.header_delia__phone p:hover {
+  color: #fff;
+}
+.header_delia__button {
+  text-align: center;
+  color: #025955;
+  background: #E6C639;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.header_delia__button:hover {
+  background: #fff;
+}
+.header_delia__listMenu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #025955;
+  border-radius: 0 0 40px 40px;
+  padding: 5px 0 7px;
+}
+.header_delia__item {
+  list-style: none;
+  width: 13%;
+  text-align: center;
+  position: relative;
+}
+.header_delia__item:hover .header_delia__dropdown {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(1%);
+}
+.header_delia__link a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s linear;
+}
+.header_delia__link a:hover {
+  color: #E6C639;
+}
+.header_delia__dropdown {
+  transition: all 0.2s linear;
+  position: absolute;
+  top: 47px;
+  left: 0;
+  background: #fff;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(10%);
+  transition: transform 0.2s linear;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+}
+.header_delia__dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+}
+.header_delia__dropdown ul li {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 8px 20px;
+  text-align: left;
+}
+.header_delia__dropItemTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #025955;
+  position: relative;
+  padding: 8px 0;
+  transition: all 0.2s linear;
+}
+.header_delia__dropItemTitle a {
+  font-weight: 500;
+  color: #025955;
+}
+.header_delia__dropItemTitle:hover .header_delia__dropItemSmall {
+  height: auto;
+  display: block;
+}
+.header_delia .header_delia__dropItemTitle:hover {
+  background-color: #025955;
+  color: #fff;
+}
+.header_delia .header_delia__dropItemTitle:hover a {
+  color: #fff;
+}
+.header_delia .header_delia__dropItemTitle:hover .header_delia__dropItemSmall a {
+  color: #025955;
+}
+.header_delia__dropItemSmall {
+  height: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
+  display: none;
+  position: absolute;
+  left: 198px;
+  top: -1px;
+  width: 100%;
+  background: #fff;
+  border-radius: 0 7px 7px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s linear;
+}
+.header_delia__dropItemSmall ul li {
+  padding: 8px 10px;
+  transition: all 0.2s linear;
+}
+.header_delia__dropItemSmall ul li:hover {
+  background: #d9ba30;
+}
+.header_delia__nav {
+  display: none;
+}
+.header_delia__logoMb, .header_delia__logoSmail {
+  display: none;
+}
+.header_delia__bg {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .header_delia .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .header_delia__content {
+    display: none;
+  }
+  .header_delia__top {
+    display: none;
+  }
+  .header_delia__logoSmail {
+    display: block;
+    margin: 0;
+  }
+  .header_delia__logoSmail img {
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .header_delia__box {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0;
+    align-items: center;
+    padding: 8px 15px;
+  }
+  .header_delia__bg {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .header_delia__nav {
+    display: block;
+  }
+  .header_delia__nav img {
+    display: block;
+    width: 25px;
+    height: auto;
+  }
+  .header_delia__link {
+    padding: 2px 0 8px 15px;
+    border-bottom: 1px dotted #18817c;
+    text-align: left;
+  }
+  .header_delia__link a {
+    font-size: 15px;
+  }
+  .header_delia__link br {
+    display: none;
+  }
+  .header_delia__logo {
+    max-width: 60px;
+  }
+  .header_delia__logoMb {
+    display: block;
+    margin: 10px auto;
+    max-width: 160px;
+  }
+  .header_delia__logoMb img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .header_delia__bottom {
+    flex-direction: column;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    width: 250px;
+    z-index: 20;
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+    background: #025955;
+  }
+  .header_delia .show {
+    transform: translateX(0);
+  }
+  .header_delia__list {
+    gap: 0;
+    border-top: 1px dotted #18817c;
+  }
+  .header_delia__listMenu {
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+  }
+  .header_delia__item {
+    width: 100%;
+    padding: 3px 0;
+  }
+  .header_delia__btn {
+    display: none;
+    margin: 0;
+  }
+  .header_delia__link::after {
+    content: "ˇ";
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    color: #fff;
+  }
+  .header_delia__link:last-child::after {
+    content: none;
+  }
+  .header_delia .header_delia__dropItemTitle:has(> .header_delia__dropItemSmall)::after {
+    content: "ˇ";
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+    top: 8px;
+    color: #bda227;
+  }
+  .header_delia__item:hover .header_delia__dropdown {
+    display: block;
+    flex-direction: column;
+  }
+  .header_delia__item:hover .header_delia__link {
+    background-color: unset;
+  }
+  .header_delia__item.open .header_delia__dropdown {
+    display: block;
+    background-color: #eee;
+    width: 100%;
+  }
+  .header_delia .header_delia__dropItemTitle:hover {
+    background-color: #eee;
+    font-weight: bold;
+    color: #bda227;
+  }
+  .header_delia .header_delia__dropItemTitle:hover .header_delia__dropItemSmall {
+    font-weight: 400;
+  }
+  .header_delia__dropdown {
+    width: 100%;
+    display: none;
+    position: unset;
+    padding: 0;
+    box-shadow: unset;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 2px 15px;
+  }
+  .header_delia__dropdown ul {
+    width: 226px;
+  }
+  .header_delia__dropdown ul li {
+    border-bottom: 1px dotted #ccc;
+    padding: 6px 20px 6px 0px;
+  }
+  .header_delia__dropTitle {
+    font-size: 14px;
+  }
+  .header_delia__dropItemSmall {
+    position: unset;
+    left: 0;
+    top: 0;
+    background: none;
+    border-radius: none;
+    border: none;
+    box-shadow: none;
+  }
+  .header_delia__dropItemTitle {
+    position: relative;
+  }
+  .header_delia__dropItemTitle:hover .header_delia__dropItemSmall {
+    padding: 0 15px;
+    margin-top: 5px;
+    border-bottom: 1px dotted #eaeaea;
+    border-radius: 0;
+  }
+  .header_delia__dropItemTitle:hover .header_delia__dropItemSmall ul li:hover {
+    background-color: #eee;
+  }
+  .header_delia__dropItemTitle.drop {
+    border-bottom: none;
+  }
+  .header_delia .header_delia__dropItemTitle:hover a {
+    color: #025955;
+  }
+}
+@media (max-width: 767px) {
+  .header_delia__logoSmail img {
+    max-width: 135px;
+  }
+  .header_delia__logoMb {
+    max-width: 130px;
+  }
+}/*# sourceMappingURL=header_delia.css.map */

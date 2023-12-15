@@ -1,0 +1,120 @@
+.footer_delia {
+    padding: 30px 0;
+    background: #025955;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        width: 20%;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__item {
+        width: 40%;
+        color: #fff;
+        font-weight: 400;
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            font-size: 17px;
+            margin-bottom: 5px;
+            span {
+                font-weight: 600;
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0;
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__img {
+        img {
+            width: 35px;
+            height: auto;
+            display: block;
+        }
+    }
+    &__des {
+        width: 30%;
+        color: #fff;
+        font-weight: 400;
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            font-size: 17px;
+            margin-bottom: 5px;
+            span {
+                font-weight: 600;
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+    @media (max-width: 1180px) {
+        &__title {
+            font-size: 18px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        &__des {
+            width: 32%;
+            li {
+                font-size: 15px;
+            }
+        }
+        &__item {
+            li {
+                font-size: 15px;
+            }
+        }
+        &__img img {
+            width: 30px;
+            height: auto;
+        }
+    }
+    @media (max-width: 767px) {
+        &__box {
+            flex-wrap: wrap;
+        }
+        &__logo {
+            width:50%;
+            margin: 0 auto;
+        }
+        &__item {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &__des {
+            width: 100%;
+        }
+        &__icon {
+            justify-content: flex-start;
+        }
+    }
+    @media (max-width: 320px) {
+        &__logo {
+            width:60%;
+        }
+        &__title {
+            font-size: 16px;
+        }
+    }
+}
